@@ -492,7 +492,7 @@ details[open] .popup-inner {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 18px 0;
+    padding: 18px 120px;  
     font-size: 1rem;
     border-radius: 10px;
 }
