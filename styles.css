@@ -121,7 +121,7 @@ ul {
 .classes-header,
 .progress-header,
 .practice-header {
-    background-color: rgb(0, 0, 0);
+    background-color: #ff7aac;
     color: rgb(255, 255, 255);
     padding: 20px 40px;
     position: relative;
@@ -492,7 +492,7 @@ details[open] .popup-inner {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 18px 0;
+    padding: 18px 20px;
     font-size: 1rem;
     border-radius: 10px;
 }
