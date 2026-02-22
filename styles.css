@@ -595,8 +595,21 @@ details[open] .popup-inner {
    ============================================= */
 @media (max-width: 480px) {
 
-    /* --- Хедер: перебудовуємо у колонку + адаптація фону --- */
-    header,
+    /* --- Головний хедер --- */
+    header {
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 180px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    /* --- classes/progress/practice хедери:
+         фон підлаштовується під розмір екрану --- */
     .classes-header,
     .progress-header,
     .practice-header {
@@ -605,19 +618,13 @@ details[open] .popup-inner {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: auto; /* Автоматична висота на мобільних */
-        min-height: 180px; /* Мінімальна висота */
-        background-size: cover; /* Фон покриває весь блок */
+        height: auto;          /* Висота підлаштовується під контент */
+        min-height: 200px;
+        width: 100%;           /* Ширина на весь екран */
+        box-sizing: border-box;
+        background-size: cover;            /* Фон покриває весь блок */
         background-position: center center; /* Центрування фону */
-        background-attachment: scroll; /* Фіксована прокрутка для iOS */
-    }
-
-    /* --- Додатково для classes/practice/progress --- */
-    .classes-header,
-    .progress-header,
-    .practice-header {
-        background-size: cover; /* Переконуємось що фон покриває область */
-        background-position: center 40%; /* Трохи вище центру для кращого вигляду */
+        background-attachment: scroll;     /* Для коректної роботи на iOS */
     }
 
     /* --- Зображення: скасовуємо абсолютне позиціювання --- */
@@ -626,7 +633,7 @@ details[open] .popup-inner {
     .progress-header img,
     .practice-header img {
         position: static;
-        width: 100px;
+        width: 80px;
         height: auto;
         margin: 0 auto 10px auto;
         order: -1;
@@ -648,13 +655,29 @@ details[open] .popup-inner {
         padding: 0 10px;
     }
 
-    /* --- Навігація: пункти вертикально --- */
+    /* --- Nav всередині classes/progress/practice:
+         кнопки вертикально, однакова довжина --- */
+    .classes-header nav,
+    .progress-header nav,
+    .practice-header nav {
+        flex-direction: column;
+        align-items: stretch;   /* Розтягує всі кнопки до однакової ширини */
+        gap: 8px;
+        margin-top: 16px;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* --- Звичайна навігація (поза хедером):
+         кнопки вертикально, однакова довжина --- */
     nav ul {
-        flex-direction: wrap;
-        align-items: stretch;
-        gap: 6px;
+        flex-direction: column;
+        align-items: stretch;   /* Розтягує всі кнопки до однакової ширини */
+        gap: 8px;
         width: 100%;
         padding: 0 10px;
+        box-sizing: border-box;
     }
 
     nav ul li {
@@ -662,13 +685,14 @@ details[open] .popup-inner {
     }
 
     nav ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 18px 20px;
-    font-size: 1rem;
-    border-radius: 10px;
-}
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
 
     /* --- Секція переваг --- */
     .advantages {
@@ -727,12 +751,13 @@ details[open] .popup-inner {
         width: 100%;
     }
 
+    /* --- Прибираємо важкі анімації на мобільних --- */
     .lesson-card:hover {
-        transform: translateY(0) scale(1); /* Без підйому */
+        transform: translateY(0) scale(1);
     }
-    
+
     .start-btn:hover {
-        animation: none; /* Без світіння */
+        animation: none;
     }
 }
 
