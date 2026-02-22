@@ -138,6 +138,7 @@ ul {
     right: 5px;  
     width: 84px;
     height: 64px;
+    animation: float 3s ease-in-out infinite;
 }
 
 .classes-header nav,
@@ -501,7 +502,7 @@ details[open] .popup-inner {
    ============================================= */
 @media (max-width: 480px) {
 
-    /* --- Хедер: перебудовуємо у колонку --- */
+    /* --- Хедер: перебудовуємо у колонку + адаптація фону --- */
     header,
     .classes-header,
     .progress-header,
@@ -511,6 +512,19 @@ details[open] .popup-inner {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        height: auto; /* Автоматична висота на мобільних */
+        min-height: 180px; /* Мінімальна висота */
+        background-size: cover; /* Фон покриває весь блок */
+        background-position: center center; /* Центрування фону */
+        background-attachment: scroll; /* Фіксована прокрутка для iOS */
+    }
+
+    /* --- Додатково для classes/practice/progress --- */
+    .classes-header,
+    .progress-header,
+    .practice-header {
+        background-size: cover; /* Переконуємось що фон покриває область */
+        background-position: center 40%; /* Трохи вище центру для кращого вигляду */
     }
 
     /* --- Зображення: скасовуємо абсолютне позиціювання --- */
@@ -619,4 +633,44 @@ details[open] .popup-inner {
     .footer-center {
         width: 100%;
     }
+}
+
+/* Додайте це у ваш styles.css */
+.advantages li {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.advantages li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background-color: #f0f8ff; /* Ніжно-блакитний під стиль Cinnamoroll */
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff0faf; /* Блакитний колір під стиль Sanrio */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
