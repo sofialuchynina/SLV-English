@@ -640,6 +640,7 @@ details[open] .popup-inner {
         justify-content: center;
         gap: 8px;
         padding: 0 10px;
+        align-items: center;
     }
 
     nav ul li {
