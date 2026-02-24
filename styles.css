@@ -549,7 +549,7 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-@media (max-height: 828px) and (orientation: landscape) {
+@media (max-height: 500px) and (orientation: landscape) {
 
     header {
         padding: 10px 20px;
@@ -584,7 +584,7 @@ details[open] .popup-inner {
 
     header img {
         position: static;
-        width: 60px;
+        width: 100px;
         height: auto;
         margin: 0 10px 0 0;
         flex-shrink: 0;
