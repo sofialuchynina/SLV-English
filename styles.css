@@ -584,7 +584,7 @@ details[open] .popup-inner {
 
     header img {
         position: static;
-        width: 100px;
+        width: 150px;
         height: auto;
         margin: 0 10px 0 0;
         flex-shrink: 0;
