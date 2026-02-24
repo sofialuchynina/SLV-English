@@ -811,7 +811,7 @@ details[open] .popup-inner {
         align-items: stretch;
         gap: 8px;
         margin-top: 16px;
-        width: 100%;
+        width: 200px;
         padding: 0;
         box-sizing: border-box;
     }
