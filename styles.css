@@ -543,86 +543,77 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 1024px) and (min-width: 769px) {
     header h1 {
-        font-size: 60px;
-        margin-left: 40px;
+        font-size: 70px;
+        margin-left: 60px;
     }
 
     header p {
-        margin-left: 40px;
-        font-size: 22px;
-        max-width: 65%;
+        margin-left: 60px;
+        font-size: 24px;
+        max-width: 70%;
     }
 
     header img {
-        width: 180px;
+        width: 200px;
         height: auto;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        padding: 16px 60px;
+        font-size: 1.3rem;
+    }
+
+    .lessons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .advantages {
+        max-width: 90%;
+        padding-left: 30px;
+    }
+
+    .advantages li {
+        font-size: 20px;
     }
 
     .classes-header,
     .progress-header,
     .practice-header {
-        padding: 16px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto;          
-        min-height: 200px;
-        width: 100%;           
-        box-sizing: border-box;
-        background-size: cover;           
-        background-position: center center;
+        height: 250px;
+        padding: 20px 30px;
     }
 
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
+        margin-top: 70px;
+        gap: 20px;
+    }
+
+    .practice-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-container {
         flex-direction: column;
-        align-items: stretch;   
-        gap: 8px;
-        margin-top: 16px;
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;  
-        gap: 8px;
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
+        gap: 20px;
         text-align: center;
-        padding: 14px 20px;
-        font-size: 1rem;
-        border-radius: 10px;
-        box-sizing: border-box;
     }
 
-
-    .lessons-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .footer-right {
+        text-align: center;
     }
-
-    .advantages {
-        max-width: 90%;
-    }}
+}
 
 @media (max-width: 480px) {
-
     header {
         padding: 16px 20px;
         display: flex;
@@ -643,13 +634,13 @@ details[open] .popup-inner {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: auto;          
+        height: auto;
         min-height: 200px;
-        width: 100%;           
+        width: 100%;
         box-sizing: border-box;
-        background-size: cover;            
-        background-position: center center; 
-        background-attachment: scroll;    
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
     }
 
     header img,
@@ -677,12 +668,11 @@ details[open] .popup-inner {
         padding: 0 10px;
     }
 
-    /* кнопки вертикально, однакова довжина*/
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
         flex-direction: column;
-        align-items: stretch;   
+        align-items: stretch;
         gap: 8px;
         margin-top: 16px;
         width: 100%;
@@ -692,7 +682,7 @@ details[open] .popup-inner {
 
     nav ul {
         flex-direction: column;
-        align-items: stretch;  
+        align-items: stretch;
         gap: 8px;
         width: 100%;
         padding: 0 10px;
@@ -730,6 +720,7 @@ details[open] .popup-inner {
     section h2 {
         font-size: 22px;
         padding: 0 10px;
+        margin-left: 10px;
     }
 
     .lessons-grid {
@@ -773,6 +764,118 @@ details[open] .popup-inner {
     }
 }
 
+@media (max-width: 932px) and (min-width: 481px) and (orientation: landscape) {
+    header {
+        padding: 12px 30px;
+        height: auto;
+        min-height: 120px;
+    }
+
+    header h1 {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    header p {
+        font-size: 16px;
+        margin-left: 20px;
+        max-width: 60%;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
+        right: 20px;
+    }
+
+    .classes-header,
+    .progress-header,
+    .practice-header {
+        height: 180px;
+        padding: 12px 30px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .classes-header img,
+    .progress-header img,
+    .practice-header img {
+        width: 60px;
+        height: auto;
+    }
+
+    .classes-header nav,
+    .progress-header nav,
+    .practice-header nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        flex: 0 1 auto;
+        width: auto;
+        min-width: 140px;
+    }
+
+    nav ul li a {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .lessons-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .advantages {
+        max-width: 95%;
+        padding-left: 20px;
+    }
+
+    .advantages li {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .practice-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .stats-row {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .chat-box {
+        height: 150px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+}
+
 .advantages li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -781,7 +884,7 @@ details[open] .popup-inner {
 .advantages li:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    background-color: #fff0fb; 
+    background-color: #fff0fb;
 }
 
 @keyframes float {
@@ -803,7 +906,7 @@ nav ul li a::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #ff0faf; 
+    background-color: #ff0faf;
     transition: width 0.3s ease;
 }
 
