@@ -391,6 +391,7 @@ details[open] .popup-inner {
 
 .price {
     color:#ff7aac;
+    font-weight: bold;
 }
 
 
@@ -550,7 +551,6 @@ details[open] .popup-inner {
 
 @media (max-height: 500px) and (orientation: landscape) {
 
-    /* Header — компактний */
     header {
         padding: 10px 20px;
         display: flex;
@@ -559,7 +559,7 @@ details[open] .popup-inner {
         flex-wrap: wrap;
         min-height: unset;
         height: auto;
-        width: 100%;
+        width: 1000px;
         box-sizing: border-box;
         margin: 0;
     }
