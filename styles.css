@@ -586,7 +586,7 @@ details[open] .popup-inner {
         width: 60px;
         height: auto;
         margin: 0 10px 0 0;
-        order: -1;
+        order: 1;
         flex-shrink: 0;
     }
 
