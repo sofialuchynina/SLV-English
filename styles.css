@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -28,16 +27,29 @@ header img {
     right: 10px;  
     width: 250px;
     height: 200px;
-    ;
     margin-left: -200px; 
 }
 
 header p {
-    font-family: 'Comic Sans MS';
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     margin-left: 100px;
     max-width: 70%;
     line-height: 1.4;
+}
+
+.sots {
+    text-align: center;
+}
+
+.sots h3 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #151515;
+}
+
+.sots img {
+    height: 50px;
+    width: 50px;
 }
 
 .classes-header img{
@@ -46,10 +58,9 @@ header p {
     right: 10px;  
     width: 250px;
     height: 200px;
-    ;
     margin-left: -200px; 
 }
-/* --- NAV --- */
+
 nav {
     padding: 20px 0;
 }
@@ -81,7 +92,6 @@ nav ul li a:hover {
     background-color: #ffc8f6;
 }
 
-/* --- SECTION / ADVANTAGES --- */
 section h2 {
     margin-left: 40px;
     text-align: left;
@@ -113,13 +123,12 @@ ul {
     color: #ed2170;
 }
 
-/* --- SECONDARY HEADERS --- */
 .classes-header,
 .progress-header,
 .practice-header {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("quiz-banner.jpg");
-    background-size: cover;        /* щоб картинка покривала весь header */
-    background-position: center;   /* центрування */
+    background-size: cover;      
+    background-position: center;   
     background-repeat: no-repeat; 
     color: rgb(255, 255, 255);
     padding: 20px 40px;
@@ -148,7 +157,7 @@ ul {
     gap: 30px;
     margin-top: 90px;
 }
-/* --- FOOTER --- */
+
 footer {
     background-color: #000;
     color: #ff7aac;
@@ -177,7 +186,6 @@ footer {
     text-align: right;
 }
 
-/* --- CONTAINER & LESSONS GRID --- */
 .container {
     max-width: 1200px;
     margin: 40px auto;
@@ -192,10 +200,8 @@ footer {
     align-items: start;
 }
 
-/* --- АНІМАЦІЇ ДЛЯ КАРТОК КУРСІВ --- */
-
-/* Ховер ефект для всієї картки */
 .lesson-card {
+    height: 100%;
     border: 3px solid #000;
     border-radius: 20px;
     padding: 25px;
@@ -206,18 +212,16 @@ footer {
     box-shadow: 8px 8px 0px #ff7aac;
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.4s ease; /* Додаємо плавний перехід */
+    transition: all 0.4s ease; 
     cursor: pointer;
 }
 
-/* При наведенні на картку */
 .lesson-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Підіймається і трохи збільшується */
-    box-shadow: 12px 12px 0px #ff7aac, 0 15px 30px rgba(255, 122, 172, 0.3); /* Більша тінь */
-    border-color: #ff7aac; /* Змінюємо колір рамки */
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 12px 12px 0px #ff7aac, 0 15px 30px rgba(255, 122, 172, 0.3); 
+    border-color: #ff7aac; 
 }
 
-/* Анімація для бейджика при ховері на картку */
 .lesson-card:hover .badge {
     transform: rotate(-5deg) scale(1.1);
     background: #ff7aac;
@@ -232,10 +236,9 @@ footer {
     border-radius: 10px;
     font-weight: bold;
     margin-bottom: 10px;
-    transition: all 0.3s ease; /* Плавний перехід */
+    transition: all 0.3s ease; 
 }
 
-/* Анімація для заголовка при ховері */
 .lesson-card:hover h3 {
     color: #ff7aac;
     transform: translateX(5px);
@@ -245,7 +248,6 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Пульсація для ціни при ховері */
 .lesson-card:hover .price {
     animation: pulse 0.6s ease-in-out;
 }
@@ -254,8 +256,6 @@ footer {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
-
-/* --- АНІМАЦІЇ ДЛЯ КНОПКИ "ПОЧАТИ КУРС" --- */
 
 .start-btn {
     background: #000;
@@ -273,7 +273,6 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* При наведенні на кнопку */
 .start-btn:hover {
     background: #ff7aac;
     color: #000;
@@ -281,7 +280,6 @@ footer {
     box-shadow: 0 10px 20px rgba(255, 122, 172, 0.4);
 }
 
-/* Ефект "хвилі" при наведенні */
 .start-btn::before {
     content: '';
     position: absolute;
@@ -300,13 +298,11 @@ footer {
     height: 300px;
 }
 
-/* Активний стан (при натисканні) */
 .start-btn:active {
     transform: translateY(0) scale(0.98);
     box-shadow: 0 5px 10px rgba(255, 122, 172, 0.3);
 }
 
-/* Світіння кнопки */
 .start-btn:hover {
     animation: glow 1.5s ease-in-out infinite;
 }
@@ -319,8 +315,6 @@ footer {
         box-shadow: 0 0 10px #ff7aac, 0 0 20px #ff7aac, 0 0 30px #ff7aac;
     }
 }
-
-/* --- АНІМАЦІЯ ДЛЯ КНОПКИ "ПЕРЕГЛЯНУТИ МАТЕРІАЛИ" --- */
 
 .material-popup summary {
     padding: 10px;
@@ -340,14 +334,11 @@ footer {
     box-shadow: 0 5px 15px rgba(237, 33, 112, 0.4);
 }
 
-/* Легка анімація при відкритті попапу */
 .material-popup[open] summary {
     background: #ed2170;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-/* --- ДОДАТКОВА АНІМАЦІЯ: БЛИСК ПРИ ПОЯВІ --- */
 
 @keyframes shine {
     0% {
@@ -394,12 +385,15 @@ details[open] .popup-inner {
     animation: slideDown 0.3s ease-out;
 }
 
+.price {
+    color:#ff7aac;
+}
+
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* --- PROGRESS PAGE --- */
 .progress-card {
     background: #fdfdfd;
     border: 3px solid #000;
@@ -410,13 +404,11 @@ details[open] .popup-inner {
     transition: all 0.8s ease;
 }
 
-/* Коли з'являється */
 .progress-card.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Можна ще додати легку анімацію для статистики */
 .stat-bubble {
     opacity: 0;
     transform: scale(0.8);
@@ -466,7 +458,6 @@ details[open] .popup-inner {
     font-weight: bold;
 }
 
-/* --- PRACTICE PAGE --- */
 .practice-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -479,8 +470,8 @@ details[open] .popup-inner {
     padding: 20px;
     border-radius: 15px;
     opacity: 0;
-    transform: translateY(30px); /* Зсув вниз на 30 пікселів */
-    transition: all 0.8s ease-out; /* Плавність анімації */
+    transform: translateY(30px); 
+    transition: all 0.8s ease-out;
 }
 
 .quiz-container.show, 
@@ -552,10 +543,8 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-/* =============================================
-   MEDIA QUERY 1 — TABLET (max-width: 1024px)
-   ============================================= */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+
     header h1 {
         font-size: 60px;
         margin-left: 40px;
@@ -572,44 +561,6 @@ details[open] .popup-inner {
         height: auto;
     }
 
-    nav ul {
-        gap: 15px;
-    }
-
-    nav ul li a {
-        padding: 18px 120px;
-        font-size: 1.2rem;
-    }
-
-    .lessons-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .advantages {
-        max-width: 90%;
-    }
-}
-
-/* =============================================
-   MEDIA QUERY 2 — MOBILE (max-width: 480px)
-   ============================================= */
-@media (max-width: 480px) {
-
-    /* --- Головний хедер --- */
-    header {
-        padding: 16px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        min-height: 180px;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    /* --- classes/progress/practice хедери:
-         фон підлаштовується під розмір екрану --- */
     .classes-header,
     .progress-header,
     .practice-header {
@@ -618,50 +569,19 @@ details[open] .popup-inner {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: auto;          /* Висота підлаштовується під контент */
+        height: auto;          
         min-height: 200px;
-        width: 100%;           /* Ширина на весь екран */
+        width: 100%;           
         box-sizing: border-box;
-        background-size: cover;            /* Фон покриває весь блок */
-        background-position: center center; /* Центрування фону */
-        background-attachment: scroll;     /* Для коректної роботи на iOS */
+        background-size: cover;           
+        background-position: center center;
     }
 
-    /* --- Зображення: скасовуємо абсолютне позиціювання --- */
-    header img,
-    .classes-header img,
-    .progress-header img,
-    .practice-header img {
-        position: static;
-        width: 80px;
-        height: auto;
-        margin: 0 auto 10px auto;
-        order: -1;
-    }
-
-    /* --- Заголовок --- */
-    header h1 {
-        font-size: 36px !important;
-        margin-left: 0 !important;
-        text-align: center;
-    }
-
-    /* --- Описовий текст --- */
-    header p {
-        font-size: 16px;
-        margin-left: 0 !important;
-        max-width: 100%;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    /* --- Nav всередині classes/progress/practice:
-         кнопки вертикально, однакова довжина --- */
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
         flex-direction: column;
-        align-items: stretch;   /* Розтягує всі кнопки до однакової ширини */
+        align-items: stretch;   
         gap: 8px;
         margin-top: 16px;
         width: 100%;
@@ -669,11 +589,9 @@ details[open] .popup-inner {
         box-sizing: border-box;
     }
 
-    /* --- Звичайна навігація (поза хедером):
-         кнопки вертикально, однакова довжина --- */
     nav ul {
         flex-direction: column;
-        align-items: stretch;   /* Розтягує всі кнопки до однакової ширини */
+        align-items: stretch;  
         gap: 8px;
         width: 100%;
         padding: 0 10px;
@@ -694,7 +612,107 @@ details[open] .popup-inner {
         box-sizing: border-box;
     }
 
-    /* --- Секція переваг --- */
+
+    .lessons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantages {
+        max-width: 90%;
+    }}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        min-height: 180px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .classes-header,
+    .progress-header,
+    .practice-header {
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;          
+        min-height: 200px;
+        width: 100%;           
+        box-sizing: border-box;
+        background-size: cover;            
+        background-position: center center; 
+        background-attachment: scroll;    
+    }
+
+    header img,
+    .classes-header img,
+    .progress-header img,
+    .practice-header img {
+        position: static;
+        width: 80px;
+        height: auto;
+        margin: 0 auto 10px auto;
+        order: -1;
+    }
+
+    header h1 {
+        font-size: 36px !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 16px;
+        margin-left: 0 !important;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* кнопки вертикально, однакова довжина*/
+    .classes-header nav,
+    .progress-header nav,
+    .practice-header nav {
+        flex-direction: column;
+        align-items: stretch;   
+        gap: 8px;
+        margin-top: 16px;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;  
+        gap: 8px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
     .advantages {
         padding-left: 10px;
         padding-right: 10px;
@@ -714,28 +732,23 @@ details[open] .popup-inner {
         padding: 0 10px;
     }
 
-    /* --- Картки уроків: одна колонка --- */
     .lessons-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* --- Практика: один під одним --- */
     .practice-layout {
         grid-template-columns: 1fr;
     }
 
-    /* --- Статистика: один під одним --- */
     .stats-row {
         flex-direction: column;
     }
 
-    /* --- Прогрес --- */
     .progress-card {
         padding: 20px 15px;
     }
 
-    /* --- Футер --- */
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -751,7 +764,6 @@ details[open] .popup-inner {
         width: 100%;
     }
 
-    /* --- Прибираємо важкі анімації на мобільних --- */
     .lesson-card:hover {
         transform: translateY(0) scale(1);
     }
@@ -761,7 +773,6 @@ details[open] .popup-inner {
     }
 }
 
-/* Додайте це у ваш styles.css */
 .advantages li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -770,9 +781,8 @@ details[open] .popup-inner {
 .advantages li:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    background-color: #f0f8ff; /* Ніжно-блакитний під стиль Cinnamoroll */
+    background-color: #fff0fb; 
 }
-
 
 @keyframes float {
     0% { transform: translateY(0px); }
