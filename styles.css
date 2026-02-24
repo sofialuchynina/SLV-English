@@ -543,76 +543,6 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-    header h1 {
-        font-size: 70px;
-        margin-left: 60px;
-    }
-
-    header p {
-        margin-left: 60px;
-        font-size: 24px;
-        max-width: 70%;
-    }
-
-    header img {
-        width: 200px;
-        height: auto;
-    }
-
-    nav ul {
-        gap: 20px;
-    }
-
-    nav ul li a {
-        padding: 16px 60px;
-        font-size: 1.3rem;
-    }
-
-    .lessons-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .advantages {
-        max-width: 90%;
-        padding-left: 30px;
-    }
-
-    .advantages li {
-        font-size: 20px;
-    }
-
-    .classes-header,
-    .progress-header,
-    .practice-header {
-        height: 250px;
-        padding: 20px 30px;
-    }
-
-    .classes-header nav,
-    .progress-header nav,
-    .practice-header nav {
-        margin-top: 70px;
-        gap: 20px;
-    }
-
-    .practice-layout {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .footer-right {
-        text-align: center;
-    }
-}
-
 @media (max-width: 480px) {
     header {
         padding: 16px 20px;
@@ -668,7 +598,6 @@ details[open] .popup-inner {
         padding: 0 10px;
     }
 
-    nav ul,
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
@@ -677,7 +606,16 @@ details[open] .popup-inner {
         gap: 8px;
         margin-top: 16px;
         width: 100%;
-        padding: 0 10px;  
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+        padding: 0;
         box-sizing: border-box;
     }
 
