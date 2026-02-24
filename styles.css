@@ -11,6 +11,7 @@ header {
     padding: 20px 40px;
     border-bottom: 1px solid #f0f0f0;
     position: relative; 
+    height: 700px;
 }
 
 header h1 {
@@ -639,8 +640,8 @@ details[open] .popup-inner {
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        padding: 0 10px;
-        align-items: center;
+        margin-top: 10px;
+        width: 100%;
     }
 
     nav ul li {
@@ -887,7 +888,6 @@ details[open] .popup-inner {
 
 .advantages li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .advantages li:hover {
