@@ -559,7 +559,7 @@ details[open] .popup-inner {
         flex-wrap: wrap;
         min-height: unset;
         height: auto;
-        width: 1000px;
+        width: 100%;
         box-sizing: border-box;
         margin: 0;
     }
@@ -570,7 +570,7 @@ details[open] .popup-inner {
         text-align: left;
         line-height: 1;
         flex: 1 1 auto;
-        order: 0;
+        order: -1;
     }
 
     header p {
@@ -587,7 +587,6 @@ details[open] .popup-inner {
         width: 60px;
         height: auto;
         margin: 0 10px 0 0;
-        order: 1;
         flex-shrink: 0;
     }
 
