@@ -543,83 +543,191 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
+/* ===== LANDSCAPE PHONE (горизонтальне положення) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
 
-    header h1 {
-        font-size: 60px;
-        margin-left: 40px;
-    }
-
-    header p {
-        margin-left: 40px;
-        font-size: 22px;
-        max-width: 65%;
-    }
-
-    header img {
-        width: 180px;
+    /* Header — компактний */
+    header {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: unset;
         height: auto;
     }
 
+    header h1 {
+        font-size: 32px !important;
+        margin-left: 10px !important;
+        text-align: left;
+        line-height: 1;
+        flex: 1 1 auto;
+    }
+
+    header p {
+        font-size: 13px;
+        margin-left: 10px !important;
+        max-width: 80%;
+        text-align: left;
+        padding: 0;
+        width: 100%;
+    }
+
+    header img {
+        position: static;
+        width: 60px;
+        height: auto;
+        margin: 0 10px 0 0;
+        order: -1;
+        flex-shrink: 0;
+    }
+
+    /* Банери класів / прогресу / практики — зменшена висота */
     .classes-header,
     .progress-header,
     .practice-header {
-        padding: 16px 20px;
+        padding: 10px 20px;
+        min-height: 140px;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
-        height: auto;          
-        min-height: 200px;
-        width: 100%;           
-        box-sizing: border-box;
-        background-size: cover;           
-        background-position: center center;
     }
 
+    .classes-header h1,
+    .progress-header h1,
+    .practice-header h1 {
+        font-size: 24px;
+        margin: 0 0 6px 0;
+    }
+
+    .classes-header img,
+    .progress-header img,
+    .practice-header img {
+        position: static;
+        width: 50px;
+        height: auto;
+        margin: 0 auto 6px auto;
+        order: -1;
+    }
+
+    /* Навігація — горизонтально, менші кнопки */
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
-        flex-direction: column;
-        align-items: stretch;   
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 8px;
-        margin-top: 16px;
+        margin-top: 10px;
         width: 100%;
-        padding: 0;
-        box-sizing: border-box;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: stretch;  
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 8px;
-        width: 100%;
         padding: 0 10px;
-        box-sizing: border-box;
     }
 
     nav ul li {
-        width: 100%;
+        width: auto;
     }
 
     nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 14px 20px;
-        font-size: 1rem;
-        border-radius: 10px;
-        box-sizing: border-box;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        display: inline-block;
+        width: auto;
     }
 
-
+    /* Сітка уроків — 2 або 3 колонки в залежності від ширини */
     .lessons-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
+    /* Ліаут практики — 2 колонки залишається, але компактніше */
+    .practice-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    /* Stats row — горизонтально */
+    .stats-row {
+        flex-direction: row;
+    }
+
+    /* Картки — менший padding */
+    .lesson-card {
+        padding: 15px;
+    }
+
+    .progress-card {
+        padding: 16px;
+    }
+
+    /* Секція */
+    section h2 {
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    /* Контейнер */
+    .container {
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    /* Переваги */
     .advantages {
-        max-width: 90%;
-    }}
+        margin: 20px 20px;
+        padding-left: 20px;
+    }
+
+    .advantages li {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .advantages li span {
+        font-size: 13px;
+    }
+
+    /* Chat */
+    .chat-box {
+        height: 130px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    /* Вимкнути важкі hover-анімації для продуктивності */
+    .lesson-card:hover {
+        transform: translateY(0) scale(1);
+    }
+
+    .start-btn:hover {
+        animation: none;
+    }
+}
 
 @media (max-width: 480px) {
 
