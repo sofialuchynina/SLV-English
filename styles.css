@@ -201,7 +201,7 @@ footer {
 }
 
 .lesson-card {
-    height: 100%;
+    height: auto;
     border: 3px solid #000;
     border-radius: 20px;
     padding: 25px;
@@ -214,6 +214,10 @@ footer {
     transform: translateY(50px);
     transition: all 0.4s ease; 
     cursor: pointer;
+}
+
+.lesson-card p{
+    flex: 1;
 }
 
 .lesson-card:hover {
@@ -389,6 +393,7 @@ details[open] .popup-inner {
     color:#ff7aac;
 }
 
+
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -543,8 +548,6 @@ details[open] .popup-inner {
     font-size: 1.1rem;
 }
 
-/* ===== LANDSCAPE PHONE (горизонтальне положення) ===== */
-/* ===== LANDSCAPE PHONE (горизонтальне положення) ===== */
 @media (max-height: 500px) and (orientation: landscape) {
 
     /* Header — компактний */
@@ -587,7 +590,6 @@ details[open] .popup-inner {
         flex-shrink: 0;
     }
 
-    /* Банери класів / прогресу / практики — зменшена висота */
     .classes-header,
     .progress-header,
     .practice-header {
@@ -621,7 +623,6 @@ details[open] .popup-inner {
         order: -1;
     }
 
-    /* Навігація — горизонтально, менші кнопки */
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
@@ -652,24 +653,20 @@ details[open] .popup-inner {
         width: auto;
     }
 
-    /* Сітка уроків — 2 або 3 колонки в залежності від ширини */
     .lessons-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
-    /* Ліаут практики — 2 колонки залишається, але компактніше */
     .practice-layout {
         grid-template-columns: 1fr 1fr;
         gap: 16px;
     }
 
-    /* Stats row — горизонтально */
     .stats-row {
         flex-direction: row;
     }
 
-    /* Картки — менший padding */
     .lesson-card {
         padding: 15px;
     }
@@ -678,19 +675,16 @@ details[open] .popup-inner {
         padding: 16px;
     }
 
-    /* Секція */
     section h2 {
         font-size: 18px;
         margin-left: 20px;
     }
 
-    /* Контейнер */
     .container {
         margin: 20px auto;
         padding: 0 16px;
     }
 
-    /* Переваги */
     .advantages {
         margin: 20px 20px;
         padding-left: 20px;
@@ -705,12 +699,10 @@ details[open] .popup-inner {
         font-size: 13px;
     }
 
-    /* Chat */
     .chat-box {
         height: 130px;
     }
 
-    /* Footer */
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -731,7 +723,6 @@ details[open] .popup-inner {
         text-align: right;
     }
 
-    /* Вимкнути важкі hover-анімації для продуктивності */
     .lesson-card:hover {
         transform: translateY(0) scale(1);
     }
