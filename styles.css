@@ -699,7 +699,6 @@ nav ul li a:hover::after {
 
 .lesson-card.completed {
     margin-top: -5px;
-    height:430px;
     background: linear-gradient(135deg, #f2e8f5 0%, #d5c8e6 100%);
     border-color: #000000;
     box-shadow: 8px 8px 0px #5e0186; 
@@ -733,6 +732,22 @@ nav ul li a:hover::after {
 .lesson-card.completed .material-popup summary{
     background: #9400D3;
     color: #fff;
+}
+
+.lesson-card .material-popup {
+    overflow: visible;
+}
+
+.material-popup[open] {
+    overflow: visible;
+}
+
+.popup-inner {
+    padding: 15px;
+    background: white;
+    border-top: 2px solid #000;
+    border-radius: 0 0 10px 10px;
+    overflow: visible;
 }
 
 .start-btn.started {
@@ -1016,12 +1031,35 @@ nav ul li a:hover::after {
     z-index: 999;
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
-/* ============================================
-   МОБІЛЬНА АДАПТАЦІЯ — всі сторінки
-   ============================================ */
 
-/* ── Tablet (≤ 768px) ── */
 @media (max-width: 768px) {
+
+    .filter-section {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .filter-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    .filter-item input,
+    .filter-item select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reset-btn {
+        width: 100% !important;
+        height: auto !important;
+        padding: 13px;
+        align-self: auto !important;
+    }
 
     /* Header / Nav */
     header {
@@ -1050,32 +1088,6 @@ nav ul li a:hover::after {
         font-size: 0.9rem;
     }
 
-    /* Filter section */
-    .filter-section {
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px;
-    }
-
-    .filter-item {
-        width: 100%;
-    }
-
-    .filter-item input,
-    .filter-item select {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 1rem;
-        padding: 10px 12px;
-        border-radius: 10px;
-    }
-
-    .reset-btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-    }
-
     /* Lessons grid */
     .lessons-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1097,7 +1109,6 @@ nav ul li a:hover::after {
         min-width: 120px;
     }
 
-    /* "Скинути розпочаті курси" — прибираємо жорсткий margin-left */
     .view-completed-btn[style*="margin-left"] {
         margin-left: 0 !important;
         margin-top: 12px;
@@ -1112,7 +1123,6 @@ nav ul li a:hover::after {
         box-sizing: border-box;
     }
 
-    /* Practice page */
     .practice-layout {
         flex-direction: column;
         gap: 20px;
@@ -1153,7 +1163,6 @@ nav ul li a:hover::after {
         white-space: nowrap;
     }
 
-    /* Footer */
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -1161,19 +1170,16 @@ nav ul li a:hover::after {
         padding: 20px 16px;
     }
 
-    /* Advantages */
     .advantages {
         grid-template-columns: 1fr 1fr;
         gap: 14px;
     }
 
-    /* Social icons */
     .sots img {
         width: 44px;
         height: 44px;
     }
 
-    /* Completed page grid */
     .completed-page-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 18px;
@@ -1192,10 +1198,8 @@ nav ul li a:hover::after {
     }
 }
 
-/* ── Mobile (≤ 480px) ── */
 @media (max-width: 480px) {
 
-    /* Header */
     header img {
         width: 64px;
         height: 64px;
@@ -1219,12 +1223,10 @@ nav ul li a:hover::after {
         border-radius: 10px;
     }
 
-    /* Container padding */
     .container {
         padding: 12px;
     }
 
-    /* Filter */
     .filter-section {
         padding: 12px;
         gap: 10px;
@@ -1249,13 +1251,11 @@ nav ul li a:hover::after {
         border-radius: 10px;
     }
 
-    /* Lessons grid */
     .lessons-grid {
         grid-template-columns: 1fr;
         gap: 14px;
     }
 
-    /* Progress */
     .timer-card {
         padding: 14px 16px;
         border-radius: 14px;
@@ -1310,7 +1310,6 @@ nav ul li a:hover::after {
         margin-top: 10px;
     }
 
-    /* Practice */
     .quiz-container,
     .bot-container {
         padding: 16px;
@@ -1363,13 +1362,11 @@ nav ul li a:hover::after {
         border-radius: 10px;
     }
 
-    /* Advantages */
     .advantages {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 
-    /* Footer */
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -1386,7 +1383,6 @@ nav ul li a:hover::after {
         font-size: 0.85rem;
     }
 
-    /* Completed page */
     .completed-page-grid {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -1396,7 +1392,7 @@ nav ul li a:hover::after {
         padding: 16px;
         border-radius: 14px;
         border-width: 2px;
-        box-shadow: 3px 3px 0px #4CAF50;
+        box-shadow: 3px 3px 0px #9400D3;
     }
 
     .completed-course-card h3 {
@@ -1438,7 +1434,6 @@ nav ul li a:hover::after {
     }
 }
 
-/* ── Landscape mobile (≤ 812px висота ≤ 430px) ── */
 @media (max-height: 430px) and (orientation: landscape) {
 
     header {
@@ -1529,11 +1524,10 @@ nav ul li a:hover::after {
     }
 }
 
-/* ── Touch devices — вимикаємо hover ── */
 @media (hover: none) {
     .completed-course-card:hover {
         transform: none;
-        box-shadow: 3px 3px 0px #4CAF50;
+        box-shadow: 3px 3px 0px #9400D3;
     }
     .cancel-btn:hover {
         background: #fff;
