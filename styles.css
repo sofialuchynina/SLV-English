@@ -699,6 +699,7 @@ nav ul li a:hover::after {
 
 .lesson-card.completed {
     margin-top: -5px;
+    height: auto;
     background: linear-gradient(135deg, #f2e8f5 0%, #d5c8e6 100%);
     border-color: #000000;
     box-shadow: 8px 8px 0px #5e0186; 
@@ -1188,5 +1189,11 @@ nav ul li a:hover::after {
 
     .filter-item {
         flex: 1 1 180px;
+    }
+
+    .reset-btn {
+        flex: 0 0 auto;
+        align-self: flex-end;
+        min-height: 40px;
     }
 }
