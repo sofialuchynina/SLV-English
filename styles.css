@@ -1260,6 +1260,7 @@ nav ul li a:hover::after {
         padding: 0 10px;
     }
 
+    /* кнопки вертикально, однакова довжина*/
     .classes-header nav,
     .progress-header nav,
     .practice-header nav {
@@ -1362,7 +1363,7 @@ nav ul li a:hover::after {
     .completed-badge-row {
         flex-direction: column;
     }
-    
+
     .filter-section {
         flex-direction: row;
         flex-wrap: wrap;
