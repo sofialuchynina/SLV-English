@@ -1,0 +1,151 @@
+.completed-page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .completed-course-card {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 3px solid #4CAF50;
+            border-radius: 20px;
+            padding: 25px;
+            position: relative;
+            box-shadow: 6px 6px 0px #4CAF50;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .completed-course-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .completed-course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px #4CAF50;
+        }
+
+        .completed-course-card .badge {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .completed-course-card h3 {
+            color: #2E7D32;
+            margin: 10px 0 6px;
+            font-size: 1.2rem;
+        }
+
+        .completed-course-card .lang-tag {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .completed-course-card .checkmark {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            font-size: 2rem;
+        }
+
+        .cancel-btn {
+            background: #fff;
+            color: #e53935;
+            border: 2px solid #e53935;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9rem;
+            margin-top: 12px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .cancel-btn:hover {
+            background: #e53935;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(229, 57, 53, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .empty-state .emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .empty-state p {
+            font-size: 1.3rem;
+            color: #ff7aac;
+            margin-bottom: 20px;
+        }
+
+        .empty-state a {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #000;
+            color: #ff7aac;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .empty-state a:hover {
+            background: #ff7aac;
+            color: #000;
+        }
+
+        .page-title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .page-subtitle {
+            color: #888;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #ff7aac;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: #ed2170; }
+
+        #toast {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1rem;
+            z-index: 999;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
