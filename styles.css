@@ -1393,8 +1393,6 @@ nav ul li a:hover::after {
     }
 
     .view-completed-btnn {
-        flex: 0 0 auto;
-        align-self: flex-start;
         background-color: #610126;
         color: white;
     }
@@ -1404,8 +1402,6 @@ nav ul li a:hover::after {
     display: block;
 }
 }
-
-
 
 .view-completed-btnn {
     background:#610126; 
