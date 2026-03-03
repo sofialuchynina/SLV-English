@@ -840,6 +840,11 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
     text-align: center;
 }
+.view-completed-btnn,
+.view-completed-btn{
+    width: 1100px;
+    display: block;
+}
 
 .view-completed-btn:hover {
     background: #ed2170;
@@ -1418,8 +1423,3 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
 }
 
-.view-completed-btnn,
-.view-completed-btn{
-    width: 1100px;
-    display: block;
-}
