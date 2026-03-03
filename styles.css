@@ -703,7 +703,7 @@ nav ul li a:hover::after {
     background: linear-gradient(135deg, #f2e8f5 0%, #d5c8e6 100%);
     border-color: #000000;
     box-shadow: 8px 8px 0px #5e0186; 
-    opacity: 0,8;
+    opacity: 0.8;
     transform: translateY(5px);
     cursor: pointer;
     position: relative;
@@ -1403,11 +1403,6 @@ nav ul li a:hover::after {
         background-color: #610126;
         color: white;
     }
-    .view-completed-btn,
-    .view-completed-btnn {
-    width: 300px;
-    display: block;
-}
 }
 
 .view-completed-btnn {
