@@ -826,7 +826,6 @@ nav ul li a:hover::after {
 }
 
 .view-completed-btn {
-    display: inline-block;
     margin-top: 20px;
     padding: 14px 32px;
     background: #ff7aac;
@@ -839,6 +838,7 @@ nav ul li a:hover::after {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .view-completed-btn:hover {
@@ -1398,13 +1398,18 @@ nav ul li a:hover::after {
         background-color: #610126;
         color: white;
     }
+    .view-completed-btn,
+    .view-completed-btnn {
+    width: 300px;
+    display: block;
 }
+}
+
+
 
 .view-completed-btnn {
     background:#610126; 
     color: white;
-    margin-left:580px;
-    display: inline-block;
     margin-top: 20px;
     padding: 14px 32px;
     border: none;
@@ -1415,4 +1420,10 @@ nav ul li a:hover::after {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+.view-completed-btnn,
+.view-completed-btn{
+    width: 1100px;
+    display: block;
 }
